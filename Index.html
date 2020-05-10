@@ -1,47 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link href="Slutprojekt.css" rel="stylesheet">
-</head>
-<body class="bodystartsida">
-    <header>    
-    <h1>Musik</h1>  
-    </header>
+<!DOCTYPE html> <!--förklara att html används-->
+<html lang="sv"> <!--förklara att man använder det svenska språket-->
+<head> <!--Information som inte visas på sidan-->
+    <meta charset="UTF-8"> <!--förklarar vilket teckenspråk som används-->
+    <title>Index</title> <!--visar vilken sida det är-->
+    <link href="Slutprojekt.css" rel="stylesheet"> <!--länkar ihop html dokumentet met css filen-->
+</head> <!--head avslutas-->
 
-    <nav>
-         <ul>
-            <li class="linav"><a href="index.html">Startsida</a></li>
-            <li class="linav"><a href="Artister.html">Artister</a></li>
+<body class="bodystartsida"> <!--all information inom body kommer visas på sidan. class gör så att vi kan ändra på denna specifika klassen genom css filen-->
+    <header> <!--det som visas högst upp på sidan-->
+        <h1>Musik</h1> <!--h1 är första rubriken--> 
+    </header> <!--avslutar header-->
+
+    <nav> <!--nav står för navigation och visar att e här länkarna ska kunna förflytta till nästa sida som en meny-->
+        <ul> <!--ul skapar en lista-->
+            <li class="linav"><a href="index.html">Startsida</a></li> <!--li skapar en punkt på listan och href säger vart länken leder till-->
+            <li class="linav"><a href="Artister.html">Artister</a></li> 
             <li class="linav"><a href="Genre.html">Genre</a></li>
             <li class="linav"><a href="Instrument.html">Instrument</a></li>
-         </ul>
-    </nav>
+        </ul> <!--avslutar listan-->
+    </nav> <!--avslutar -->
+
+    <br> <!--radbyte-->
     <br>
 
-    <div class="box">
-        <h2>Välkommen</h2>
-        <form>
-			<label for="Namn">Namn</label><br>
-			<input type="text" id="Namn" name="Namn" value=""><br>
+    <div class="box"> <!-- Delar av sidan så att man enklare kan justera och flytta på saker-->
+        <h2>Välkommen</h2> <!--andra rubrik-->
+        <form> <!--Formulär-->
+            <label for="Namn">Namn</label> <!--Label är vad som visas i formuläred-->
+            <br>
+            <input type="text" id="Namn" name="Namn" value=""> <!--Input tillåter användaren att skriva i formuläret, ID är vart användarens svar sparas och value är blankt och tillåter användaren att fylla i det-->
+            <br>
 			<label for="Ålder">Ålder</label><br>
-			<input type="text" id="Ålder" name="Ålder" value=""><br>
-		</form> 
-		<br>
+            <input type="text" id="Ålder" name="Ålder" value="">
+            <br>
+        </form> 
+        <br>
 		<form>
-			<input type="radio" id="Man" name="Kön" value="Man">
-			<label for="Man">Man</label><br>
+			<input type="radio" id="Man" name="Kön" value="Man"> <!--Radio gör så att det blir en ifylldbar punkt istället-->
+            <label for="Man">Man</label>
+            <br>
 			<input type="radio" id="Kvinna" name="Kön" value="Kvinna">
-			<label for="Kvinna">Kvinna</label><br>
+            <label for="Kvinna">Kvinna</label>
+            <br>
 			<input type="radio" id="Annat" name="Kön" value="Annat">
-			<label for="Annat">Annat</label><br><br>		
-			<input type="Submit" value="Skicka" formaction="Formulär1.html">
-        </form>
-        
-
+            <label for="Annat">Annat</label>
+            <br>
+            <br>		
+            <input type="Submit" value="Skicka" formaction="Artist1.html"><!-- gör att när man tryckker på skicka eller avbryt så skickas man till länken som är angiven i formaction-->
+            <input type="Submit" value="Avbryt" formaction="Artist2.html">
+        </form> <!--avslutar formuläret-->
     </div>
 
-</body>
-</html>
+</body><!--avslutar body-->
+</html><!--avslutar html koden-->

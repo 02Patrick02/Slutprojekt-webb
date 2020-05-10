@@ -1,113 +1,150 @@
-header h1{
-    font-size: 3vh;
-    text-align:center;
-    }
+header h1 { /*cssen för hur header och första rubriken ser ut*/
+  font-size: 3vh; /*text storlek */
+  text-align:center;/*texten centreras*/
+}
 
-nav{
-    background-color:rgb(111, 34, 199);
-    overflow: hidden;
-    height:10vh;
-    width:99vw;
-   }
+caption{/*ändrar på tabellens rubrik*/
+  font-size: 1.5em;
+  color: Grey;/*ändrar text färgen till grå*/
+}
+
+nav { /*Cssen för hur nav/globala menyn ser ut*/
+  background-color:rgb(111, 34, 199); /*ändrar på backgrundsfärgen för meny*/
+  overflow: hidden; /*Överflödet är klippt och resten av innehållet kommer att vara osynligt*/
+  height:10vh; /*Navigationens höjd*/
+  width:99vw; /*navigationens bredd*/
+}
 
 .linav {
-    display: inline;
-    text-align: center;
-    font-size: 2vh;
-    list-style-type: none;
-   }
+  text-align: center;
+  font-size: 2vh;
+  list-style-type: none;/*tar bort punkterna från listan*/
+}
 
- a {
-    display: block;
-    float: left;
-    color: black;
-    padding: 2vh 10vw;
-    text-decoration: none;
-   }
-li a:hover {
-    background-color: rgb(75, 6, 88);
-    color: white;
-   }
-.active::after{
-    background-color: blue;
-   }
+a { /*css till länkar*/
+  display: block; /*Gör de olika alternativen till blocks*/
+  float: left; 	/*Gör så de åker vänster */
+  color: black;
+  padding: 2vh 10vw;/*ändrar på storlek*/
+  text-decoration: none;/*gör så att länkarna inte är understrukna*/
+}
 
-.bodystartsida{
-    background-image: url(https://s1.1zoom.me/big0/820/429210-Kycb.jpg);
-    background-repeat: no-repeat;
-    background-size:100vw 100vh;
-  }
-.box {
-    width: 10vw;
-    border:1vh solid black;
-    margin:auto;
-    background-color:white;
-    padding:6vh;
-  }
-.instrumentnav{
+li a:hover {/*css för när du håller över länkar*/
+  background-color: rgb(75, 6, 88);
+  color: white;
+}
+
+.active::after {/*ccs för när man aktiverar länk*/
+  background-color: blue;
+}
+
+.bodystartsida {/*css till index sidan*/
+  background-image: url(https://s1.1zoom.me/big0/820/429210-Kycb.jpg);/*bakgrundsbild för startsidan*/
+  background-repeat: no-repeat;/*göt så att bakgrunden inte repeterar sig*/
+  background-size:100vw 100vh;/*bakgrundens storlek*/
+}
+
+.box {/*css för formulär*/
+  width: 10vw;
+  border:1vh solid black;/*ram runt formulären*/
+  margin:auto; /*gör så att den placerar sig i mitten*/
+  background-color:white;
+  padding:6vh;
+}
+
+.instrumentnav {/*css för instrument sidans navigation*/
   background-color:rgb(111, 34, 199);
   overflow: hidden;
   height:16vh;
   width:99vw;
 }
-table{
+
+table { /*css för tabell*/
   width: 50vw;
   border:1vmin solid black;
-  border-collapse: collapse;
+  border-collapse: collapse;/*blir inget mellanrum mellan bordern*/
   text-align:center;
 }
-tr:nth-child(odd){
+
+tr:nth-child(odd) {/*öjämna mällanrum i tabellen får en viss färg*/
   background-color: aqua;
 }
-tr:nth-child(even){
+
+tr:nth-child(even) {/*jämna mellanrum får en specifik färg*/
   background-color:rgb(206, 98, 98);
 }
-img{
+
+.img { /*css för alla bilder*/
   width:22vw;
   height:22vh;
   border:solid black;
   display:block;
   float: right;
-  margin-right: 1vw;
+  margin-right: 1vw;/*ändrar avståndet till höger*/
 }
-.grid{
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-  grid-template-rows: 7vh 15vh 26vh 26vh 26vh; 
-  grid-template-areas:
-  "titel titel"
-  "nav nav"
+
+.grid { /*grid för sidorna, sorterar så att rätt sak hamnar på rätt plats där man vill*/
+  display: grid;/*visar att det är en grid*/
+  grid-template-columns: 50vw 50vw;/*collumnber för griden som är 50% av sidan*/
+  grid-template-rows: 7vh 15vh 26vh 26vh 26vh; /*rader för griden och hur många % eller vh den ska deals in i*/
+  grid-template-areas:/*vilken area av griden som ska bli "upptagen av en bild eller annat*/
+  "titel titel"/*vad som sak stå i första raden*/
+  "nav nav"/*andra raden och vidare nedåt*/
   "li bild1"
   "tabell1 bild2"
   "tabell2 bild3";
 }
-.vt{
-  grid-area: li;
+
+.vt {/*css för att visa i vilken ruta i griden listan ska placeras*/
+  grid-area: li;/*vad griden ska benämnas som*/
 }
 
-.tabell1{
+.tabell1 {/*css för tabell1*/
   grid-area:tabell1;
 }
-.tabell2{
+
+.tabell2 {/*ccs för tabell 2*/
   grid-area:tabell2;
 }
-.bild1{
+
+.bild1 {/*ccs för bild1*/
   grid-area:bild1;
-  margin-top: 2vh;
-  margin-right: 1vh;
+  margin-top: 2vh;/*ändrar avståndet till toppen*/
+  margin-right: 1vh;/*ändrar avståndet till höger*/
 }
-.bild2{
+
+.bild2 {/*css för bild2*/
   grid-area:bild2;
-  margin-right: 1vh;
   margin-top: 2vh;
+  margin-right: 1vh;
 }
-.bild3{
+
+.bild3 {/*css för bild3*/
   grid-area:bild3;
   margin-top: 2vh;
   margin-right: 1vh;
-
 }
-.titel{
+
+.titel {/*css för titel*/
   grid-area:titel;
   text-align: center;
+}
+
+.Lokala { /*css för lokala meny länkarna*/
+  width: 40vw;
+  height: 80vh;
+  margin-top: 2vh;
+  margin-left: 1vw;/*ändrar avståndet åt vänster*/
+}
+
+.MusicVid {/*css för music videon*/
+  float: right;
+  margin-right: 40vw;
+  margin-top: 20vh;
+}
+
+.MusicVid iframe {/*css för musikvideon*/
+  height: 20vw;
+  width: 50vh;
+  position: absolute;
 }
