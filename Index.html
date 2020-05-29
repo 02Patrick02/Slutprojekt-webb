@@ -13,29 +13,27 @@
 
     <nav> <!--nav står för navigation och visar att e här länkarna ska kunna förflytta till nästa sida som en meny-->
         <ul> <!--ul skapar en lista-->
-            <li class="linav"><a href="index.html">Startsida</a></li> <!--li skapar en punkt på listan och href säger vart länken leder till-->
-            <li class="linav"><a href="Artister.html">Artister</a></li> 
-            <li class="linav"><a href="Genre.html">Genre</a></li>
-            <li class="linav"><a href="Instrument.html">Instrument</a></li>
+            <li><a href="index.html">Startsida</a></li> <!--li skapar en punkt på listan och href säger vart länken leder till-->
+            <li><a href="Artister.html">Artister</a></li> 
+            <li><a href="Genre.html">Genre</a></li>
+            <li><a href="Instrument.html">Instrument</a></li>
         </ul> <!--avslutar listan-->
     </nav> <!--avslutar -->
 
     <br> <!--radbyte-->
     <br>
 
-    <div class="box"> <!-- Delar av sidan så att man enklare kan justera och flytta på saker-->
-        <h2>Välkommen</h2> <!--andra rubrik-->
-        <form> <!--Formulär-->
+    <main> <!-- Delar av sidan så att man enklare kan justera och flytta på saker-->
+        <form action="Artister.html" method="POST" > <!--Formulär-->
+            <h2>Välkommen</h2> <!--andra rubrik-->
             <label for="Namn">Namn</label> <!--Label är vad som visas i formuläred-->
             <br>
-            <input type="text" id="Namn" name="Namn" value=""> <!--Input tillåter användaren att skriva i formuläret, ID är vart användarens svar sparas och value är blankt och tillåter användaren att fylla i det-->
+            <input type="text" id="Namn" name="Namn" > <!--Input tillåter användaren att skriva i formuläret, ID är vart användarens svar sparas och value är blankt och tillåter användaren att fylla i det-->
             <br>
 			<label for="Ålder">Ålder</label><br>
-            <input type="text" id="Ålder" name="Ålder" value="">
+            <input type="text" id="Ålder" name="Ålder">
             <br>
-        </form> 
-        <br>
-		<form>
+            <br>
 			<input type="radio" id="Man" name="Kön" value="Man"> <!--Radio gör så att det blir en ifylldbar punkt istället-->
             <label for="Man">Man</label>
             <br>
@@ -46,10 +44,15 @@
             <label for="Annat">Annat</label>
             <br>
             <br>		
-            <input type="Submit" value="Skicka" formaction="Artist1.html"><!-- gör att när man tryckker på skicka eller avbryt så skickas man till länken som är angiven i formaction-->
-            <input type="Submit" value="Avbryt" formaction="Artist2.html">
+            <input type="Submit" value="Skicka"><!-- gör att när man tryckker på skicka eller avbryt så skickas man till länken som är angiven i formaction-->
+            <input type="Submit" value="Avbryt">
         </form> <!--avslutar formuläret-->
-    </div>
+    </main>
+
+    <footer id="färg">
+        <h3>Hej</h3>
+        <p>Hej den här sidan är skapad av Patrick och handlar om musik</p>
+    </footer>
 
 </body><!--avslutar body-->
 </html><!--avslutar html koden-->

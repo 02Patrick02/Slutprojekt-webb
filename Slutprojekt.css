@@ -13,9 +13,10 @@ nav { /*Cssen för hur nav/globala menyn ser ut*/
   overflow: hidden; /*Överflödet är klippt och resten av innehållet kommer att vara osynligt*/
   height:10vh; /*Navigationens höjd*/
   width:99vw; /*navigationens bredd*/
+  border-radius: 10px;
 }
 
-.linav {
+nav li {
   text-align: center;
   font-size: 2vh;
   list-style-type: none;/*tar bort punkterna från listan*/
@@ -31,21 +32,17 @@ a { /*css till länkar*/
 
 li a:hover {/*css för när du håller över länkar*/
   background-color: rgb(75, 6, 88);
-  color: white;
-}
-
-.active::after {/*ccs för när man aktiverar länk*/
-  background-color: blue;
+  color: #ffffff;
 }
 
 .bodystartsida {/*css till index sidan*/
-  background-image: url(https://s1.1zoom.me/big0/820/429210-Kycb.jpg);/*bakgrundsbild för startsidan*/
+  background-image: url(Förstasidabild.jpg);/*bakgrundsbild för startsidan*/
   background-repeat: no-repeat;/*göt så att bakgrunden inte repeterar sig*/
   background-size:100vw 100vh;/*bakgrundens storlek*/
 }
 
-.box {/*css för formulär*/
-  width: 10vw;
+form{/*css för formulär*/
+  width: 15vw;
   border:1vh solid black;/*ram runt formulären*/
   margin:auto; /*gör så att den placerar sig i mitten*/
   background-color:white;
@@ -55,7 +52,7 @@ li a:hover {/*css för när du håller över länkar*/
 .instrumentnav {/*css för instrument sidans navigation*/
   background-color:rgb(111, 34, 199);
   overflow: hidden;
-  height:16vh;
+  height:10vh;
   width:99vw;
 }
 
@@ -92,15 +89,18 @@ tr:nth-child(even) {/*jämna mellanrum får en specifik färg*/
   "nav nav"/*andra raden och vidare nedåt*/
   "li bild1"
   "tabell1 bild2"
-  "tabell2 bild3";
+  "tabell2 bild3"
+  "footer footer";
 }
 
 .vt {/*css för att visa i vilken ruta i griden listan ska placeras*/
   grid-area: li;/*vad griden ska benämnas som*/
+  margin-top: 26%;
 }
 
 .tabell1 {/*css för tabell1*/
   grid-area:tabell1;
+  margin-top: 24vh;
 }
 
 .tabell2 {/*ccs för tabell 2*/
@@ -125,7 +125,7 @@ tr:nth-child(even) {/*jämna mellanrum får en specifik färg*/
   margin-right: 1vh;
 }
 
-.titel {/*css för titel*/
+header {/*css för titel*/
   grid-area:titel;
   text-align: center;
 }
@@ -137,14 +137,35 @@ tr:nth-child(even) {/*jämna mellanrum får en specifik färg*/
   margin-left: 1vw;/*ändrar avståndet åt vänster*/
 }
 
+.Lokalmeny{
+  width: 30vw;
+  margin-left: -50vw;
+  margin-top: 15vh;
+}
+div li{
+  list-style-type: none;
+}
+
 .MusicVid {/*css för music videon*/
   float: right;
-  margin-right: 40vw;
-  margin-top: 20vh;
+  padding: 10vw;
 }
 
 .MusicVid iframe {/*css för musikvideon*/
   height: 20vw;
   width: 50vh;
-  position: absolute;
+  float: right;
+  border:0px;
+}
+
+footer{
+  padding-bottom: 3vw;
+  margin-top: 10vh;
+  height: 11vw;
+  background-color: rgb(37, 42, 61);
+  grid-area: footer;
+}
+
+#färg{
+  background-color: rgb(206, 98, 98);
 }
